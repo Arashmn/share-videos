@@ -19,27 +19,27 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
-                            <label>{{ __('videos.name') }} </label>
+                            <label>@lang('videos.name')</label>
                             <input name="name" type="text" class="form-control" placeholder="{{ __('videos.name') }}">
                         </div>
                         <div class="col-md-6">
-                            <label>مدت زمان</label>
-                            <input type="text" name="length" class="form-control" placeholder="مدت زمان">
+                            <label>{{ __('videos.length') }}</label>
+                            <input type="text" name="length" class="form-control" placeholder="{{ __('videos.length') }}">
                         </div>
                         <div class="col-md-6">
-                            <label>نام یکتا</label>
-                            <input type="text" name="slug" class="form-control" placeholder="نام یکتا">
+                            <label>{{ __('videos.slug') }}</label>
+                            <input type="text" name="slug" class="form-control" placeholder="{{ __('videos.slug') }}">
                         </div>
                         <div class="col-md-6">
-                            <label>آدرس ویدیو</label>
-                            <input type="text" name="url" class="form-control" placeholder="آدرس ویدیو">
+                            <label>{{ __('videos.url') }}</label>
+                            <input type="text" name="url" class="form-control" placeholder="{{ __('videos.url') }}">
                         </div>
                         <div class="col-md-6">
-                            <label>تصویر بند‌انگشتی</label>
-                            <input type="text" name="thumbnail" class="form-control" placeholder="تصویر بند انگشتی">
+                            <label>{{ __('videos.thumbnail') }}</label>
+                            <input type="text" name="thumbnail" class="form-control" placeholder="{{ __('videos.thumbnail') }}">
                         </div>
                         <div class="col-md-6">
-                            <label>دسته بندی</label>
+                            <label>{{ __('videos.categoty') }}</label>
                             <select class="form-control" name="category_id" id="category">
                                 @foreach ($categorys as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}
@@ -50,11 +50,11 @@
                             </select>
                         </div>
                         <div class="col-md-12">
-                            <label>توضیحات</label>
-                            <textarea class="form-control" name="description" rows="4" placeholder="توضیح"></textarea>
+                            <label>{{ __('videos.description') }}</label>
+                            <textarea class="form-control" name="description" rows="4" placeholder="{{ __('videos.description') }}"></textarea>
                         </div>
                         <div class="col-md-2">
-                            <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>
+                            <button type="submit" id="contact_submit" class="btn btn-dm">{{ __('videos.save') }}</button>
                         </div>
                     </div>
                 </form>

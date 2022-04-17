@@ -1,7 +1,7 @@
 <div class="col-md-4">
     <div id="related-posts">
 
-
+     {{ $videos; }}
         @foreach ($videos as $video)
             <!-- video item -->
             <div class="related-video-item">

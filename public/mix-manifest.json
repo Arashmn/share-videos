@@ -1,5 +1,7 @@
 {
+    "/js/app.js": "/js/app.js",
     "/main.js": "/main.js",
+    "/css/app.css": "/css/app.css",
     "/main.css": "/main.css",
     "/fonts/IRANSansWeb.woff2": "/fonts/IRANSansWeb.woff2",
     "/fonts/IRANSansWeb_Bold.woff2": "/fonts/IRANSansWeb_Bold.woff2",

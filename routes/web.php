@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\videoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\videoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
+
 
 Route::get('',[videoController::class,'index'])->name('video.index');
 Route::get('/videos/create',[videoController::class,'create'])->name('video.create');

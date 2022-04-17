@@ -10,6 +10,8 @@
 
                         <!-- Video Player -->
                         <h1 class="video-title">{{ $video->name }}</h1>
+                        <h2 class="video-title">{{ $video->description }}</h2>
+                        <h2 class="video-title">{{ $video->category->name }}</h2>
                         <div class="video-code">
                             <video controls style="height: 100%; width: 100%;">
                                 <source

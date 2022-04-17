@@ -32,7 +32,7 @@ class videoController extends Controller
 
         video::create($request->validated());
 
-        return redirect()->route('video.index')->with('success', 'عملیان با موفقیت انجام شد.');
+        return redirect()->route('video.index')->with('success', __('messages.success'));
     }
 
     public function show(video $video)
@@ -54,6 +54,6 @@ class videoController extends Controller
 
         $video->update($request->validated());
 
-        return redirect()->route('video.show',$video->slug)->with('success', 'بروزر رسانی با موفقیت انجام شد.');
+        return redirect()->route('video.show',$video->slug)->with('Edit', 'بروزر رسانی با موفقیت انجام شد.');
     }
 }

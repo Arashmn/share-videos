@@ -67,7 +67,7 @@
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img src="" alt="">
                             </div>
-                            <h2>مهرداد سامی</h2>
+                            <h2>آرش مکینیان</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -75,7 +75,7 @@
                             <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>
                             <li><a href="#"><i class="fa fa-video-camera color-2"></i>اضافه کردن فیلم</a></li>
                             <li><a href="#"><i class="fa fa-star color-3"></i>برگزیده</a></li>
-                            <li><a href="#"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
+                            <li><a href="{{ Auth::logout(); }}"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,17 +86,7 @@
     <div id="main-category">
         <div class="container-full">
             <div class="row">
-                <div class="col-md-12">
-                    <ul class="main-category-menu">
-                        <li class="color-1"><a href="02-category.html"><i class="fa fa-music"></i>موسیقی</a>
-                        </li>
-                        <li class="color-2"><a href="02-category.html"><i
-                                    class="fa fa-soccer-ball-o"></i>ورزشی</a></li>
-                        <li class="color-3"><a href="02-category.html"><i class="fa fa-gamepad"></i>بازی</a>
-                        </li>
-
-                    </ul>
-                </div><!-- // col-md-14 -->
+                <x-slug-Component></x-slug-Component>
             </div><!-- // row -->
         </div><!-- // container-full -->
     </div><!-- // main-category -->
