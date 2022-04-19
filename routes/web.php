@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\User;
+use App\Mail\TestEmail;
+use App\Mail\verifyEmail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\videoController;
 
@@ -33,3 +37,14 @@ Route::put('/videos/{video}',[videoController::class,'update'])->name('video.upd
 
 
 Route::get('categories/{category}/videos',[categoryVideosController::class,'index'])->name('categories.videos.index');
+
+
+Route::get('email',function()
+{
+  
+    $user=User::first();
+
+    // Mail::to('arashmakinian@gmail.com')->send(new TestEmail($user));
+    return (new verifyEmail())->render();
+
+});

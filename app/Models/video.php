@@ -11,7 +11,7 @@ class video extends Model
 {
     use HasFactory;
 
-    protected $fillable=['name','url','slug','description','length','thumbnail','category_id'];
+    protected $fillable = ['name', 'url', 'slug', 'description', 'length', 'thumbnail', 'category_id','user_id'];
 
     public function getRouteKeyName()
     {
@@ -20,7 +20,7 @@ class video extends Model
 
     public function getLengthInHumanAttribute()
     {
-        return gmdate('i:s',$this->length) ;
+        return gmdate('i:s', $this->length);
     }
 
     public function getCreatedAtAttribute($value)
@@ -42,5 +42,16 @@ class video extends Model
     public function getCategoryNameAttribute()
     {
         return $this->category?->name;
+    }
+
+
+    public function user()
+    {
+        return $this->belongsTo(user::class);
+    }
+
+    public function getUswerNameAtrribute()
+    {
+        return $this->user?->name;
     }
 }

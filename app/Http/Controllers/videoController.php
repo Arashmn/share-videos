@@ -13,7 +13,6 @@ class videoController extends Controller
     
     public function index()
     {
-
         $poplourVideos = video::all()->random(6);
         return view('video.index', compact('poplourVideos'));
     }
@@ -29,9 +28,7 @@ class videoController extends Controller
     public function store(storeRequest $request)
     {
 
-
-        video::create($request->validated());
-
+        $request->user()->videos()->create($request->validated());
         return redirect()->route('video.index')->with('success', __('messages.success'));
     }
 

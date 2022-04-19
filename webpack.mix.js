@@ -41,3 +41,4 @@ mix.js(
 
 mix.copyDirectory("resources/css/fonts", "public/fonts");
 mix.copyDirectory("resources/img", "public/img");
+mix.copyDirectory("resources/demo_img", "public/demo_img");
