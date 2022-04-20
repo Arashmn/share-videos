@@ -3,8 +3,8 @@
 
 This is tests for Arash
 
-@component('mail::button', ['url' => ''])
-Restorepassword
+@component('mail::button', ['url' => '','color'=>'primary'])
+Restore password
 @endcomponent
 
 Thanks,<br>
